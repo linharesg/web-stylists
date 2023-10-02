@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smooth/auto</title>
+    <style>
+a {
+  display: inline-block;
+  width: 50px;
+  text-decoration: none;
+}
+nav,
+scroll-container {
+  display: block;
+  margin: 0 auto ;
+  text-align: center;
+  border: 1px solid;
+}
+nav {
+  width: 339px;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid black;
+}
+#com-smooth {
+  display: block;
+  width: 350px;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: auto;
+}
+#sem-smooth {
+  display: block;
+  width: 350px;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;
+}
+
+
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <nav>
+            <h2>scroll-behavior :auto</h2>
+            <a href="#page-1">1</a>
+            <a href="#page-2">2</a>
+            <a href="#page-3">3</a>
+          </nav>
+          <scroll-container id="com-smooth">
+            <scroll-page id="page-1">1</scroll-page>
+            <scroll-page id="page-2">2</scroll-page>
+            <scroll-page id="page-3">3</scroll-page>
+          </scroll-container>
+    </section>
+
+    <section>
+        <nav>
+            <h2>scroll-behavior: smooth</h2>
+            <a href="#page-4">4</a>
+            <a href="#page-5">5</a>
+            <a href="#page-6">6</a>
+          </nav>
+          <scroll-container id="sem-smooth">
+            <scroll-page id="page-4">4</scroll-page>
+            <scroll-page id="page-5">5</scroll-page>
+            <scroll-page id="page-6">6</scroll-page>
+          </scroll-container>
+    </section>
+      
+</body>
+
+</html>
