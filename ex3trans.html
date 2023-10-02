@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+    }
+
+    #div1 {transition-timing-function: linear;}
+    #div2 {transition-timing-function: ease;}
+    #div3 {transition-timing-function: ease-in;}
+    #div4 {transition-timing-function: ease-out;}
+    #div5 {transition-timing-function: ease-in-out;}
+    #div6 {transition-timing-function:cubic-bezier(1, 0, 0, 1)}
+
+    div:hover {
+        width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Propriedade transition-timing-function</h1>
+
+<p>Passe o mouse sobre os elementos div abaixo para ver as diferentes velocidades:</p>
+
+<div id="div1"><strong>linear</strong></div><br>
+<div id="div2"><strong>ease</strong></div><br>
+<div id="div3"><strong>ease-in</strong></div><br>
+<div id="div4"><strong>ease-out</strong></div><br>
+<div id="div5"><strong>ease-in-out</strong></div><br>
+<div id="div6"><strong>cubic-bezier(1, 0, 0, 1)</strong></div><br>
+
+</body>
+</html>
