@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity</title>
+    <style>
+        .texto-opacidade {
+            color: red;
+            opacity: 0.5;
+        }
+        
+        .texto-normal {
+            color: red;
+            opacity: 1;
+        }
+
+        .fundo-transparente {
+            background-color: hsl(271, 76%, 53%, 0.5);
+            padding: 10px;
+        }
+
+        .fundo-normal {
+            background-color: blueviolet;
+            padding: 10px;
+        }
+
+        .imagem-transparente {
+            width: 250px;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        .opacidade-hover {
+            width: 250px;
+            height: auto;
+            opacity: 1;
+        }
+
+        .opacidade-hover:hover {
+            opacity: 0.5;
+        }
+
+        .opacidade-hover-2 {
+            width: 250px;
+            height: auto;
+            opacity: 0.5;
+        }
+
+        .opacidade-hover-2:hover {
+            opacity: 1;
+        }
+
+        div.background {
+            background: url(bolinhas.avif);
+            padding: 10px;
+        }
+
+        div.transbox {
+            margin: 10px;
+            background-color: white;
+            padding: 10px;
+            opacity: 0.3;
+        }
+
+        div.transbox p {
+            margin: 10px;
+            font-weight: bold;
+            color: black;
+        }
+        
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .imagem-pb {
+            width: 250px;
+            height: auto;
+            filter: grayscale(100%);
+        }
+
+        div.sobreposicao {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(24, 173, 10, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!--Reduzindo opacidade do texto-->
+    <h1 class="texto-opacidade">Texto com opacidade reduzida</h1>
+    <h1 class="texto-normal">Texto com opacidade normal</h1>
+
+    <!--Reduzindo opacidade do fundo-->
+    <h1 class="fundo-transparente">Texto com fundo transparente</h1>
+    <h1 class="fundo-normal">Texto com fundo normal</h1>
+
+    <!--Imagem com opacidade-->
+    <img class="imagem-transparente" src="paisagem.avif" alt="paisagem"><br>
+
+    <!--Opacidade ao passar o mouse-->
+    <img class="opacidade-hover" src="paisagem.avif" alt="paisagem">
+    <img class="opacidade-hover-2" src="paisagem.avif" alt="paisagem">
+
+    <!--Fundo transparente em cima de uma imagem-->
+    <div class="background">
+        <div class="transbox">
+          <p>Texto em caixa transparente</p>
+        </div>
+    </div><br>
+
+    <!--Imagem com opacidade colorida-->
+    <div class="container">
+        <img class="imagem-pb" src="paisagem.avif" alt="paisagem">
+        <div class="sobreposicao"></div>
+    </div>
+</body>
+</html>
